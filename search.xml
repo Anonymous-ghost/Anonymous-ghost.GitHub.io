@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>FriDa安装</title>
+      <link href="/2022/02/26/a94394783b10c35a/"/>
+      <url>/2022/02/26/a94394783b10c35a/</url>
+      
+        <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Frida 是一款基于 Python + JavaScript 的 Hook 与调试框架。<br>Firda 是一款易用的跨平 Hook 工具， Java 层到 Native 层的 Hook 无所不能，是一种 动态 的插桩工具，可以插入代码到原生 App 的内存空间中，动态的去监视和修改行为，原生平台包括 Win、Mac、Linux、Android、iOS 全平台。静态二进制插桩：在程序执行前插入额外的代码和数据，生成一个永久改变的可执行文件。动态二进制插桩：在程序运行时实时地插入额外代码和数据，对可执行文件没有任何永久改变。</p><h2 id="frida和安卓平台以及python环境关系介绍"><a href="#frida和安卓平台以及python环境关系介绍" class="headerlink" title="frida和安卓平台以及python环境关系介绍"></a>frida和安卓平台以及python环境关系介绍</h2><ul><li><p>由于frida基于python所以要安装python环境。不同版本的frida应用版本也不同例如:</p><ul><li>frida12.3.6 Android5-6 Python3.7 </li><li>frida12.8.0 Android7-8 Python3.8 </li><li>frida14+  Android9+ Python3.8</li></ul></li></ul><h2 id="python环境安装"><a href="#python环境安装" class="headerlink" title="python环境安装"></a>python环境安装</h2><ul><li><p>由于安卓版本不同我用的安卓是安卓10所以安装的python版本是 3.8以上的版本</p><ul><li><p><a href="https://www.python.org/downloads/">python官方网站下载</a><br> 如下图直接选择python3.8.6下载即可<br><img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202261942355.png" alt="python下载截图"></p></li><li><p><a href="https://www.cnblogs.com/lvtaohome/p/11121377.html">python安装参考文章太简单我就不演示了</a>注意要把python加入系统环境变量中</p></li><li><p>安装成功标志 如下图:<br> <img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202261946578.png" alt="python安装成功标志"></p></li></ul></li></ul><h2 id="frida下载和安装-pc客户端"><a href="#frida下载和安装-pc客户端" class="headerlink" title="frida下载和安装(pc客户端)"></a>frida下载和安装(pc客户端)</h2><ul><li><p>python安装frida pip install frida  这样安装默认安装最新版本如果想指定版本安装那么到<a href="https://github.com/frida/frida/releases/">https://github.com/frida/frida/releases/</a> 查看版本号安安装例如<br>  <img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202261952214.png" alt="frida版本查看"> pip install frida&#x3D;&#x3D;15.1.17   其他版本的话把15.1.17替换一下就行了我就按最新版本来说了</p></li><li><p>安装frida-tools 下图 pip install frida-tools&#x3D;&#x3D;10.5.4<br>  <img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202261959609.png" alt="frida-tools版本">  </p></li><li><p>注意frida版本一定要和frida-tools对应 即15.1.7 对应的frida-tools版本是 10.5.4。卸载的话把install改成uninstall即可 pip uninstall frida-tools&#x3D;&#x3D;10.5.4</p></li><li><p>验证frida 是否安装成功标志如下图 frida –v  import frida  没有报错说明安卓成功<br><img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202262015412.png" alt="验证是否成功"></p></li></ul><h2 id="frida下载和安装-也就是安卓端服务端"><a href="#frida下载和安装-也就是安卓端服务端" class="headerlink" title="frida下载和安装(也就是安卓端服务端)"></a>frida下载和安装(也就是安卓端服务端)</h2><ul><li><p>首先确定手机的型号(adb shell getprop ro.product.cpu.abi) 然后在frida搜索一下<br><img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202262006695.png" alt="确定手机型号"><br><img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202262010155.png" alt="下载"></p></li><li><p>下载完毕解压然后使用推送adb push xxxxx &#x2F;data&#x2F;local&#x2F;tmp 目录下。然后改名并且赋予执行权限 chomd 777 &#x2F;data&#x2F;local&#x2F;tmp&#x2F;fsarm64<br><img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202262012086.png" alt="推送"></p></li><li><p>启动sever .&#x2F;fsarm64 没有报错说明成功<br><img src="https://cdn.jsdelivr.net/gh/Anonymous-ghost/mybolog-img/img/202202262017158.png" alt="没有报错成功"></p></li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul><li>至此frida安装完毕。上面涉及adb 这些和手机型号我这里用的是Pixel 一代 安卓10 某宝网站有卖 可以自学购买。下课。后续我还会发表相关教程</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 安卓逆向 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Frida </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>test</title>
       <link href="/2022/02/03/test/"/>
       <url>/2022/02/03/test/</url>
@@ -11,20 +36,6 @@
         <content type="html"><![CDATA[<p>文件</p>]]></content>
       
       
-      <categories>
-          
-          <category> Markdown2 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Typora </tag>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
       
     </entry>
     
